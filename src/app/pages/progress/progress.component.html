@@ -4,13 +4,13 @@
         <div class="card-body">
 
           <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow] = "progreso" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso + '%'" >50%</div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow] = "progreso1" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso1 + '%'" >{{ this.progreso1 }}%</div>
           </div>
 
           <br />
 
           <div class="progress">
-              <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow] = "progreso" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso + '%'" >50%</div>
+              <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow] = "progreso2" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso2 + '%'" >50%</div>
           </div>
 
         </div>
@@ -32,7 +32,7 @@
                 </div>
             </div> -->
 
-            <app-incrementador></app-incrementador>
+            <app-incrementador nombre="progress Azul" [progreso]="progreso1" (cambioValor)="actualizarBarra($event)"></app-incrementador>
 
         </div>
       </div>
@@ -41,7 +41,7 @@
           <div class="card">
             <div class="card-body">
               
-                <app-incrementador></app-incrementador>
+                <app-incrementador nombre="progress Rojo" [progreso]="progreso2" (cambioValor)=" progreso2 = $event "></app-incrementador>
 
 
             </div>
