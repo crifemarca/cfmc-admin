@@ -46,9 +46,6 @@ export class IncrementadorComponent implements OnInit {
 
   moviminetoInput( nuevoValor: number){
 
-
-    console.log(nuevoValor);
-
     if(nuevoValor >= 100){
 
       this.progreso = 100;
